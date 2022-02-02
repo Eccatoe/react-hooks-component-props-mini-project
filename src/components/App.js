@@ -1,14 +1,23 @@
 import React from "react";
 import blogData from "../data/blog";
-
-console.log(blogData);
+import Header from './Header.js'
+import ArticleList from './ArticleList.js'
+import About from './About.js'
 
 function App() {
+  const {name, image, about, id, posts}=blogData
   return (
-    <div className="App">
-      You're on your own from here! Follow the deliverables; test things out in
-      the browser as you write your code; and good luck!
-    </div>
+    <>
+    <Header name={name}/>
+    <About 
+    about={about}
+    image={image}
+    />
+    <ArticleList 
+    id={id}
+    posts={posts}
+    />
+    </>
   );
 }
 
